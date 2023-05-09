@@ -1,0 +1,80 @@
+# Arquivos de compilação
+*.obj
+*.dll
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.bin
+*.bin.*
+*.zip
+*.rar
+*.7z
+*.bak
+*.bak.*
+*.swp
+*.~*
+
+
+# Diretórios de compilação
+_ReSharper*/
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+*.vs/
+*.nupkg
+
+
+# Arquivos de publicação
+*.publish.xml
+*.publish/
+
+
+# Arquivos do Visual Studio
+.vscode/
+*.sln
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+*.vssettings
+
+
+# Diretório de logs
+logs/
+*.log
+
+
+# Arquivos temporários
+*.tmp
+*.tmp.*
+*.bak
+*.bak.*
+*.swp
+*.~*
+
+
+# Outros
+nuget.config
+packages.config
+*.sln.dotSettings.user
+
+
+# Ignorar diretório específico (substitua "NomeDoDiretorio" pelo nome real do diretório)
+# /NomeDoDiretorio/
