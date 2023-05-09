@@ -22,3 +22,4 @@ jobs:
             cd ../
             sudo docker down
             sudo docker up --build
+
