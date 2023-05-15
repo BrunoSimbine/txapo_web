@@ -1,19 +1,9 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
-    
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
-    
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish --configuration Release --self-contained true -o out
-    
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
-WORKDIR /app
-COPY --from=build-env /app/out .
+COPY ./ .
+ 
+RUN dotnet publish --configuration Release --self-contained true
 
-EXPOSE 80
-
-ENTRYPOINT ["dotnet", "txapo_web.dll"]
+FROM nginx:alpine 
+WORKDIR /usr/share/nginx/html
+COPY --from=build /app/output/wwwroot .
