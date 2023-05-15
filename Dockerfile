@@ -5,5 +5,6 @@ COPY ./ .
 RUN dotnet publish --configuration Release --self-contained true
 
 FROM nginx:alpine 
+
 WORKDIR /usr/share/nginx/html
 COPY --from=build /app/output/wwwroot .
