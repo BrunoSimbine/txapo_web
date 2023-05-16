@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
 COPY ./ .
  
-RUN dotnet publish --configuration Release --self-contained true
+RUN dotnet publish -c Release -o output
 
 FROM nginx:alpine 
 
